@@ -11,7 +11,15 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home(){
+
         return "Home";
     }
-}
+
+    @RequestMapping("/new")
+        public String getNew(){
+            return "New";
+        }
+
+    }
+
 
