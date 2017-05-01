@@ -1,5 +1,6 @@
 package hr.danko.controller;
 
+import hr.danko.model.Auto;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,14 +22,18 @@ public class HomeController {
         return "Home";
     }
 
-
-
-
     @RequestMapping("/new")
         public String getNew(){
             return "New";
         }
 
-    }
 
+   @RequestMapping("/getAuto")
+        public Auto getAuto(){
+            Auto auto=new Auto();
+            auto.setId(1);
+            auto.setName("Golf");
+            return auto;
+        }
+}
 
