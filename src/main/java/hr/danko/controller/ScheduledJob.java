@@ -19,12 +19,13 @@ public class ScheduledJob {
     @Autowired
     RestTemplate restTemplate;
 
-    //schedulirano svakih 5 sekundi
+    //schedulirano svakih 500 sekundi
     @Scheduled(fixedRate = 500000)
     public void scheduledLogger(){
        log.info("bla");
     }
 
+    //schedulirano svakih 300 sekundi
     @Scheduled(fixedRate = 300000)
     public void scheduledLogger2(){
             log.info("debug");
